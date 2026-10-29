@@ -1,0 +1,39 @@
+label {
+    padding: 10px;
+}
+
+legend {
+    padding-top: 10px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+fieldset {
+    border: solid 2px red;
+    width: 10%;
+}
+
+.custom-name {
+    border: solid 1px green;
+    color: darkslategray;
+}
+
+.generate {
+    background-color: black;
+    border: solid 1px;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+
+}
+
+#us, #uk {
+    cursor: pointer;
+}
+
+.story {
+    margin-top: 50px;
+    width: 50%;
+}
