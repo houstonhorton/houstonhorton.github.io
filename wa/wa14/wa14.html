@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Design System Template</title>
+    <style>
+        /* CSS Reset and Base Styles */
+        :root {
+            /* Color Palette - 2 Core Colors */
+            --color-primary: #6a20b9;   
+            --color-secondary: #90b000; 
+
+
+            /* Derived Colors for Flexibility */
+            --color-background: white;
+            --color-text-dark: black;
+            --color-text-light: white;
+
+            /* Typography */
+            --font-primary: 'Comic Neue', cursive;
+
+            /* Spacing System */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 0.75rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 1.5rem;
+            --spacing-xl: 2rem;
+
+            /* Border Radius */
+            --radius-sm: 5px;
+            --radius-md: 10px;
+            --radius-lg: 15px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .comic-neue-regular {
+            font-family: "Comic Neue", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            background-color: var(--color-background);
+            color: var(--color-text-dark);
+            padding: var(--spacing-xl);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Typography Styles */
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-primary);
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+            color: var(--color-primary);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            color: var(--color-primary);
+        }
+
+        .body-text {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* Color Palette Section */
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .color-swatch {
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Component Styles */
+        .button {
+            display: inline-block;
+            padding: var(--spacing-sm) var(--spacing-md);
+            background-color: var(--color-primary);
+            color: var(--color-text-light);
+            text-decoration: none;
+            border-radius: var(--radius-sm);
+            transition: background-color 0.3s ease, transform 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .button:hover {
+            background-color: color-mix(in srgb, var(--color-primary) 80%, black);
+            border-color: var(--color-secondary);
+            transform: scale(1.05);
+        }
+
+        .button:active {
+            transform: scale(0.95);
+            background-color: var(--color-secondary);
+        }
+
+        .link {
+            color: var(--color-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration-color 0.3s;
+        }
+
+        .link:hover {
+            color: var(--color-secondary);
+            text-decoration: underline;
+            text-decoration-color: var(--color-primary);
+        }
+
+        .link:visited {
+            color: var(--color-text-dark);
+        }
+
+        /* Spacing Demonstration */
+        .spacing-demo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .spacing-block {
+            background-color: var(--color-primary);
+            height: 50px;
+        }
+    </style>
+     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Design System Template</h1>
+
+        <section>
+            <h2>Color Palette</h2>
+            <div class="color-palette">
+                <div class="color-swatch" style="background-color: var(--color-primary); color: var(--color-text-light);">
+                    <strong>Primary Color</strong>
+                    <p>#6a20b9</p>
+                    <small>Contrast Ratio: 8.33:1</small>
+                </div>
+                <div class="color-swatch" style="background-color: var(--color-secondary); color: var(--color-text-light);">
+                    <strong>Secondary Color</strong>
+                    <p>#90b000</p>
+                    <small>Contrast Ratio: 2.5:1</small>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Typography</h2>
+            <h1>Heading 1 - Comic Sans</h1>
+            <h2>Heading 2 - Comic Sans</h2>
+            <h3>Heading 3 - Comic Sans</h3>
+            <p class="body-text">Body Text - Using Comic Sans with a comfortable line height and readable size.</p>
+        </section>
+
+        <section>
+            <h2>Spacing System</h2>
+            <div class="spacing-demo">
+                <div class="spacing-block" style="width: var(--spacing-xs)"></div>
+                <div class="spacing-block" style="width: var(--spacing-sm)"></div>
+                <div class="spacing-block" style="width: var(--spacing-md)"></div>
+                <div class="spacing-block" style="width: var(--spacing-lg)"></div>
+                <div class="spacing-block" style="width: var(--spacing-xl)"></div>
+            </div>
+            <p>Spacing blocks demonstrating size variations from xs to xl</p>
+        </section>
+
+        <section>
+            <h2>Interactive Components</h2>
+            <a href="#" class="button">Primary Button</a>
+            <a href="#" class="link">Standard Link</a>
+            <a href="#" class="link" style="color: purple;">Visited Link</a>
+        </section>
+    </div>
+</body>
+</html>
